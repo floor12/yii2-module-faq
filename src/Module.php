@@ -25,6 +25,9 @@ class Module extends \yii\base\Module
     const MODE_PRE_MODERATION = 'pre';
     const MODE_POST_MODERATION = 'post';
 
+    const ORDER_NEW_FIRST = '-';
+    const ORDER_OLD_FIRST = '+';
+    
     /** @var string FontAwesome helper class */
     public $fontAwesome = 'rmrevin\yii\fontawesome\FontAwesome';
 
@@ -33,13 +36,7 @@ class Module extends \yii\base\Module
 
     /** @var string Pre- or post-moderation switch */
     public $moderationMode = self::MODE_PRE_MODERATION;
-
-    /** @var string Set user class */
-    public $userClass = 'app\models\User';
-
-    /** @var boolean Show avatars on fronend */
-    public $useAvatar = true;
-
+    
     /** @var string  Admin email address to send notifications in case of pre-moderation */
     public $adminEmailAddress = "";
 

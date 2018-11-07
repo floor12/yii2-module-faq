@@ -9,7 +9,9 @@
 namespace floor12\faq\controllers;
 
 
-class FrontendController
+use yii\web\Controller;
+
+class FrontendController extends Controller
 {
     public function actionIndex()
     {
