@@ -1,17 +1,19 @@
 <?php
 
-namespace common\src\enum;
+namespace floor12\faq\models;
 
 use yii2mod\enum\helpers\BaseEnum;
 
-class StatusEnum extends BaseEnum
+class QuestionStatus extends BaseEnum
 {
-    const ACTIVE = 0;
-    const DISABLED = 1;
+    const PUBLISHED = 0;
+    const PENDING = 1;
+    const DISABLED = 2;
 
     public static $list = [
-        self::ACTIVE => 'Active',
-        self::DISABLED => 'Disabled',
+        self::PUBLISHED => 'published',
+        self::PENDING => 'pending',
+        self::DISABLED => 'disabled',
     ];
 
     public static $messageCategory = 'app.f12.faq';

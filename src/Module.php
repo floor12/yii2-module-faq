@@ -27,7 +27,7 @@ class Module extends \yii\base\Module
 
     const ORDER_NEW_FIRST = '-';
     const ORDER_OLD_FIRST = '+';
-    
+
     /** @var string FontAwesome helper class */
     public $fontAwesome = 'rmrevin\yii\fontawesome\FontAwesome';
 
@@ -52,7 +52,8 @@ class Module extends \yii\base\Module
     /** faq views paths */
     public $viewFaqList = '@vendor/floor12/yii2-module-faq/src/views/frontend/index';
     public $viewFaqListItem = '@vendor/floor12/yii2-module-faq/src/views/frontend/_index';
-    public $viewForm = '@vendor/floor12/yii2-module-faq/src/views/frontend/_form';
+    public $viewFaqSuccess = '@vendor/floor12/yii2-module-faq/src/views/frontend/_success';
+    public $viewFaqForm = '@vendor/floor12/yii2-module-faq/src/views/frontend/_form';
 
 
     /** @inheritdoc */
@@ -79,6 +80,14 @@ class Module extends \yii\base\Module
                 'app.f12.faq' => 'faq.php',
             ],
         ];
+    }
+
+    public function adminMode()
+    {
+        if ($this->editRole == '@')
+            return !\Yii::$app->user->isGuest;
+        else
+            return \Yii::$app->user->can($this->editRole);
     }
 
 }
