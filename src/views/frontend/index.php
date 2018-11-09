@@ -12,9 +12,11 @@
 
 use floor12\faq\assets\FaqAsset;
 use floor12\faq\components\QuestionFormWidget;
+use floor12\formhint\FormHintAsset;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 
+FormHintAsset::register($this);
 FaqAsset::register($this);
 
 ?>
@@ -30,8 +32,11 @@ FaqAsset::register($this);
         <?php
         echo Html::tag('h1', Yii::t('app.f12.faq', 'Frequently asked questions'));
 
+
         if (Yii::$app->getModule('faq')->adminMode())
             echo $this->render('_filter', ['model' => $model]);
+        else
+            echo Html::tag('p', Yii::t('app.f12.faq', 'Interesting questions and answers, which may be useful to others, we publish in this place.'));
 
         Pjax::begin(['id' => 'items']);
 
