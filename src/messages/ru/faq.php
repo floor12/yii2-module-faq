@@ -41,8 +41,8 @@ return [
     'Enter the email address. We will send you the answer.' => 'Введите адрес своей почты, мы отправим вам письмо, когда ответим на ваш вопрос.',
     'Enter your phone number if you want us to call you back.' => 'Введи свой номер телефона, если хотите, чтобы мы перезвонили вам.',
     'Write us your question here.' => 'Напишите нам свой вопрос здесь.',
-    '' => '',
-    '' => '',
+    'Cancel' => 'Отмена',
+    'Save' => 'Сохранить',
     '' => '',
     '' => '',
 ];
