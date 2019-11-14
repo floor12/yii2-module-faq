@@ -31,9 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "floor12\\faq\\": [
-        "src/"
-      ]
+      "floor12\\faq\\": "src"
     }
   },
   "autoload-dev": {
